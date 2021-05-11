@@ -1,4 +1,4 @@
-// Challenge :two: (Tuesday, 27 April): 
+// Challenge 2 (Tuesday, 27 April): 
 
 // lastWith is a function that takes two arguments: an array and a function.
 // lastWith returns the last element of the array for which the function returns true.
