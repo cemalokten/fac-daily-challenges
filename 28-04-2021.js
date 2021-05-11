@@ -4,7 +4,7 @@
 
 // divisible([1, 2, 3, 4]); //expected: [3]
 // divisible([1, 3, 6, 13, 15]); //expected: [3, 6, 15]
-// divisible([21, 17, 12]); //
+// divisible([21, 17, 12]); 
 
 const divisible = function(arr, callback) {
 	return arr.filter((value) => value % 3 === 0);
