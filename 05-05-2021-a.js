@@ -47,4 +47,4 @@ const biggest = function(data) {
 	return Math.floor(largest);
 };
 
-console.log(biggest(data));
+console.log(biggest(data)); 
