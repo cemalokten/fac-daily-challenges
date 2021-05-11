@@ -1,122 +1,50 @@
-// Challenge :seven: . :two: (Wednesday, 5 May):
+// Challenge 7 (Wednesday, 5 May):
 
-// Write a function biggestArr that accepts an array data as an argument. Every element of data is an object with the keys id, price, sqft.
+// Write a function biggest that accepts an array data as an argument. Every element of data is an object with the keys id, price, sqft.
 
-// biggestArr should return an array with two elements.
+// biggest should return a number, corresponding to the largest value of the price per square meter (m^2) for that object, rounded to the nearest integer.
 
-// The first element is the id of the object with the highest price / m^2
-
-// The second element is the corresponding value of price / m^2 for that object
-
-// If data is empty, return null
+// Note: The return value is expected to be in square meters (m^2), not square feet (sqft).
 
 // Example:
-// const data = [];
-// biggestArr(data) // returns null
-
-// biggestArr(data); //returns [1, 5382];
-
 // const data = [
-//    {
-//      id: 0,
-//      price: 200000,
-//      sqft: 100,
-//    },
-//    {
-//      id: 29,
-//      price: 408000,
-//      sqft: 200,
-//    },
-//  ];
-
-// biggestArr(data); //returns [29, 21958];
-
-// const data = [
-// 	{
-// 		id    : 29,
-// 		price : 408000,
-// 		sqft  : 200
-// 	},
 // 	{
 // 		id    : 0,
-// 		price : 200000,
-// 		sqft  : 100
+// 		price : 700000,
+// 		sqft  : 7200
+// 	},
+// 	{
+// 		id    : 1,
+// 		price : 100000,
+// 		sqft  : 200
 // 	}
 // ];
 
-// biggestArr(data); //returns 21958;
-
-// const biggestArr = function(data) {
-// 	let arr = [];
-// 	let id = 0;
-// 	let biggest = 0;
-// 	if (data.length > 0) {
-// 		data.map((value) => {
-// 			if (value.price / (value.sqft / 10.764) > biggest) {
-// 				biggest = Math.floor(value.price / (value.sqft / 10.764));
-// 				id = value.id;
-// 			}
-// 		});
-// 	} else {
-// 		return null;
-// 	}
-
-// 	return [ id, biggest ];
-
-// 	// let biggest = 0;
-// 	// return data.map((value) => {
-// 	// 	if (value.price / (value.sqft / 10.764) > biggest) {
-// 	// 		biggest = value.price / (value.sqft / 10.764);
-// 	// 	}
-// 	// });
-// };
-
-// console.log(biggestArr(data));
+// biggest(data); //returns 5382;
 
 const data = [
+	{
+		id    : 1,
+		price : 408000,
+		sqft  : 200
+	},
 	{
 		id    : 0,
 		price : 200000,
 		sqft  : 100
-	},
-	{
-		id    : 29,
-		price : 408000,
-		sqft  : 200
 	}
 ];
 
-const calcSqM = function(sqFt) {
-	return sqFt / 10.764;
-};
+// biggest(data); //returns 21958;
 
 const biggest = function(data) {
-	if (data.length > 0) {
-		data.map((value) => {
-			value.biggest = value.price / calcSqM(value.sqft);
-		});
-		const biggest = data.reduce((acc, cur) => {
-			return
-				cur.biggest > acc.biggest ? cur.biggest :
-				acc.biggest;
-		});
-		return biggest;
-	} else return null;
+	let largest = 0;
+	data.forEach((value) => {
+		if (value.price / (value.sqft / 10.764) > largest) {
+			largest = value.price / (value.sqft / 10.764);
+		}
+	});
+	return Math.floor(largest);
 };
 
-const biggestArr = function(data) {
-	let id = 0;
-	if (data.length > 0) {
-		data.map((value) => {
-			id =
-
-					biggest(data) === value.biggest ? value.id :
-					null;
-		});
-		return [ id, Math.floor(biggest(data)) ];
-	} else {
-		return null;
-	}
-};
-
-console.log(biggestArr(data));
+console.log(biggest(data));

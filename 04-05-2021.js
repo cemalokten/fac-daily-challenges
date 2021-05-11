@@ -1,4 +1,4 @@
-// Challenge :six:  (Tuesday, 4 May):
+// Challenge 6  (Tuesday, 4 May):
 
 // So we heard y'all like objects...
 
