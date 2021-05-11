@@ -10,7 +10,7 @@
 
 // stringToObject("a:1,b:2,c:3") //Expected { a: "1", b: "2", c: "3" }
 
-// stringToObject("one:-1,two:hi there,three:what's that?") // Expected { one: "-1", two: "hi there", three: "what's that?" }
+// stringToObject("one:-1,two:hi there,three:what's that?") // Expected { one: "-1", two: "hi there", three: "what's that?" } 
 
 const stringToObject = function(string) {
 	const array = string.split(',');
