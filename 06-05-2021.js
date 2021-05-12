@@ -13,25 +13,25 @@
 // mostCommon([]); // expected undefined
 
 const mostCommon = function(array) {
-	const frequency = array.sort().map((val) =>
-		array.reduce(
-			(acc, curr) =>
+    const frequency = array.sort().map((val) =>
+        array.reduce(
+            (acc, curr) =>
 
-					curr === val ? acc + 1 :
-					acc,
-			0
-		)
-	);
-	return array[
-		frequency.indexOf(
-			frequency.reduce(
-				(acc, curr) =>
+            curr === val ? acc + 1 :
+            acc,
+            0
+        )
+    );
+    return array[
+        frequency.indexOf(
+            frequency.reduce(
+                (acc, curr) =>
 
-						curr > acc ? curr :
-						acc
-			)
-		)
-	];
+                curr > acc ? curr :
+                acc
+            )
+        )
+    ];
 };
 
-console.log(mostCommon([ -1, -1, 0, 3, 8, 0 ]));
+console.log(mostCommon([-1, -1, 0, 3, 8, 0]));

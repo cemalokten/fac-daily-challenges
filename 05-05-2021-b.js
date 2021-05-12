@@ -1,4 +1,4 @@
-// Challenge 7.2 (Wednesday, 5 May):
+// Challenge 7.2 (Wednesday, 5 May): 
 
 // Write a function biggestArr that accepts an array data as an argument. Every element of data is an object with the keys id, price, sqft.
 

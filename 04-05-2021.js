@@ -1,6 +1,6 @@
 // Challenge 6  (Tuesday, 4 May):
 
-// So we heard y'all like objects...
+// So we heard y'all like objects..
 
 // Write a function capitaliseKeys, which takes an object as an argument, and returns a new object with the same key-value pairs as the input object, except all the keys have been capitalised.
 

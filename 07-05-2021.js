@@ -13,8 +13,11 @@
 
 // formatNumber(23082342.3285); //Expected 23,082,342.3285
 
-const formatNumber = function(number) {
-	return number.toLocaleString('en-GB', { minimumFractionDigits: 1, maximumFractionDigits: 4 });
+const formatNumber = function (number) {
+	return number.toLocaleString('en-GB', {
+		minimumFractionDigits: 1,
+		maximumFractionDigits: 4
+	});
 };
 
 console.log(formatNumber(1));
