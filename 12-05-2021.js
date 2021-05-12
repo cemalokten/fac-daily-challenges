@@ -21,13 +21,16 @@
 // // returns { tomatoes: 2, egg: 1 }
 
 function shoppingList(string) {
-    const arr = string.split(',')
-    const obj = {}
-    arr.forEach(item => {
-        let arrItem = item.trim().split(' ')
-        obj[arrItem[0]] = arrItem[1]
-    })
-    return obj
+    if (string.length != 0) {
+        const arr = string.split(',')
+        const obj = {};
+        arr.forEach(item => {
+            let arrItem = item.trim().split(' ')
+            obj[arrItem[0]] = arrItem[1]
+        })
+        return obj
+    }
+    return {}
 }
 
-console.log(shoppingList("2 tomatoes, 1 egg, 3 pumpkins"));
+console.log(shoppingList("2 tomatoes, 1 egg, 0 pumpkins"));
