@@ -1,4 +1,4 @@
-// Challenge :eight: (Thursday, May 6):
+// Challenge 8 (Thursday, May 6):
 
 // Write a function mostCommon.
 // mostCommon accepts one argument, an array of integers numbers.
