@@ -1,4 +1,4 @@
-// Challenge :nine: (Friday, May 7):
+// Challenge 9 (Friday, May 7):
 
 // Write a function formatNumber
 
