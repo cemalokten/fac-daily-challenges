@@ -8,21 +8,11 @@
 //     printInBox(['hello', 'there', 'my', 'friend']);
 // Should log:
 
-// function printInBox(array) {
-//     const longestStr = array.reduce((a, c) => (a.length < c.length) ? c.length : a);
-//     array.forEach(e => {
-//         e = ('|  ' + e + ' '.repeat(longestStr - (e.length - 2)) + '|')
-//         console.log(`${e} \n`);
-//     });
-//     array.unshift('-'.repeat(longestStr + 4))
-//     array.push('-'.repeat(longestStr + 4))
-// }
-
 function printInBox(array) {
     const longestStr = array.reduce((a, c) => (a.length < c.length) ? c.length : a);
     array.forEach(e => {
         e = ('|  ' + e + ' '.repeat(longestStr - (e.length - 2)) + '|')
-        console.log(`${e}\n`);
+        console.log(`${e} \n`);
     });
     array.unshift('-'.repeat(longestStr + 4))
     array.push('-'.repeat(longestStr + 4))
