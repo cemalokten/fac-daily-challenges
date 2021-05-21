@@ -31,5 +31,6 @@ function uniqueElements(a1, a2) {
     return arr.filter((num) => !toDelete.includes(num));
 }
 
+
 console.log(uniqueElements([1, 10, 15, 24, 24], [1, 1, 24, 30]));
 console.log(uniqueElements([1, 2, 4, 4], [1, 3, 3]));
