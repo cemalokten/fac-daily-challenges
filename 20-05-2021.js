@@ -15,5 +15,3 @@ function squareDigits(n) {
     const arr = n.toString().split('');
     return arr.map(a => Math.pow(Number(a), 2)).join('');
 }
-
-console.log(squareDigits(22));
